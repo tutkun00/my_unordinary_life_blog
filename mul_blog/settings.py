@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+# export DATABASE_URL=postgres://my_blog_db_4k41_user:HyQMjTgIQb4eVpmkjhAdXG3ad5U8GLp0@dpg-d2bnsour433s73a08c20-a.onrender.com:5432/my_blog_db_4k41
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,10 +83,8 @@ WSGI_APPLICATION = 'mul_blog.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgres://postgres:1234@localhost:5432/blog_db',
-        conn_max_age=600
-    )
+    'default': dj_database_url.config(default=os.getenv("DATABASE_URL"))
+
 }
 
 
