@@ -1,0 +1,33 @@
+{% extends "layout.html" %} 
+{% load static %}
+
+{% block title %}
+<title>Home</title>
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="hero">
+
+  <div class="hero-text">
+    <h1>Merhaba, blog siteme hoşgeldin.</h1>
+  <p>
+    Bu site, teknoloji, bilim, sanat ve uzay gibi konularla ilgili paylaşımlar içeriyor.
+    İlgimi çeken şeyleri burada bir araya getiriyorum.
+    Yazdıklarım, hem kendim için bir arşiv, hem de benzer ilgi alanlarına sahip kişilerle paylaşmak için.
+    Kısaca burası, öğrenmeyi ve keşfetmeyi sevenler için sade bir alan.
+  </p>
+  </div>
+
+  <div class="moon"></div>
+  
+</div>
+
+<div class="blog-invite">
+   <p>Sen de paylaşımlarımı okumak istersen</p>
+    <a href="{% url 'blog' %}" class="blog-invite-link">Blog'a git.</a>
+</div>
+
+
+{% endblock content %}

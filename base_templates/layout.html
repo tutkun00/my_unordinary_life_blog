@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+AU+QLD:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'images/icon.png' %}">
+    {% block title %} {% endblock title %}
+    <script>
+     const savedTheme = localStorage.getItem("customTheme");
+     if (savedTheme) {
+     const theme = JSON.parse(savedTheme);
+     document.documentElement.style.setProperty("--color-dark", theme.dark_c);
+     document.documentElement.style.setProperty("--color-mid", theme.mid_c);
+     document.documentElement.style.setProperty("--color-accent", theme.accent_c);
+     document.documentElement.style.setProperty("--color-light", theme.light_c);
+     document.documentElement.style.setProperty("--font-family", theme.font);
+    }
+</script>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- navbar -->
+     <div class="navbar">
+          <a href="{% url 'home' %}" class="logo">
+            <span class="logo_p1">My</span><span class="logo_p2">Unordinary</span><span class="logo_p3">Life</span>
+          </a>
+
+          <div class="nav-links">
+            <a href="{% url 'blog' %}" class="nav-link">Blog</a>
+            <a href="{% url 'about_me' %}" class="nav-link">Hakkımda</a>
+          </div>
+          
+          <div class="col-wrapper">
+             <span>Temalar</span>
+            <div class="themes">
+            <button class="theme-button1" onclick="changeTheme('rgb(12, 19, 79)', 'rgb(29, 38, 125)', 'rgb(92, 70, 156)', 'rgb(212, 173, 252)', `'Google Sans Code', monospace`)">Nebula</button>
+            <button class="theme-button2" onclick="changeTheme('rgb(249, 245, 235)', 'rgb(228, 220, 207)', 'rgb(234, 84, 85)', 'rgb(0, 43, 91)', `'Playwrite AU QLD', cursive`)">Bloom</button>
+            <button class="theme-button3" onclick="changeTheme('rgb(245, 243, 233)', 'rgb(215, 225, 200)', 'rgb(140, 160, 120)', 'rgb(47, 58, 36)', `'Playfair Display', serif`)">Olive Grove</button>
+          </div>
+          </div>
+     </div>
+
+    <!-- navbar end -->
+
+    <!-- content -->
+    
+        {% block content %}
+
+        {% endblock content %}
+    
+    <!-- content end -->
+
+    <!-- footer -->
+
+    <div class="footer">
+        <p>Copyright © 2025 Tüm Hakları Saklıdır.</p>
+    </div>
+    <!-- footer end -->
+    </div>
+  <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

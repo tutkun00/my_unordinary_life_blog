@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+{% block title %}
+<title>Blog</title>
+{% endblock title %}
+
+{% block content %}
+
+<div class="hero">
+    <h1>Blog</h1>
+</div>
+<div class="flex-container">
+  {% for post in page_obj  %}
+    
+        <div class="card">
+          <img src="{{post.thumbnail.url}}" alt="{{post.title}}" width="300px" height="245px">
+          <div class="card-title">
+            <h3>{{post.title}}</h3>
+          </div>
+          <div class="card-bottom">
+            <p>{{post.released_at|date:"d M Y" }}</p>
+            <a class="card-link" href="{{post.slug}}">Oku</a>
+          </div>
+        </div>
+   
+  {% endfor %}
+</div>
+
+<br>
+<br>
+
+
+<div class="pagination-wrapper">
+    <div class="pagination">
+  {% if page_obj.has_previous %}
+    <a href="?page={{ page_obj.previous_page_number }}">Önceki</a>
+  {% endif %}
+  <span class="page-info">
+    <span>Sayfa</span><span>{{ page_obj.number }}</span><span>/</span><span>{{ page_obj.paginator.num_pages }}</span>
+  </span>
+  {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}">Sonraki</a>
+  {% endif %}
+</div>
+</div>
+
+<br>
+<br>
+
+{% endblock content %}

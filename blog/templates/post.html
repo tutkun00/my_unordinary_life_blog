@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}
+<title>{{post.title}}</title>
+{% endblock title %}
+
+{% block content %}
+<div class="content-container">
+
+    <div class="head">
+        <h1>{{post.title}}</h1>
+        <h4>{{post.released_at|date:"d M Y" }}</h4>
+        <img src="{{post.thumbnail.url}}" alt="{{post.title}}">
+    </div>
+
+    <div class="text">
+        {{post.content|safe}}
+    </div>
+    
+</div>
+{% endblock content %}

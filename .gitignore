@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+*.log
+
+# Django
+db.sqlite3
+.env
+*.pot
+*.pyc
+
+# Static & Media
+/media/
+staticfiles/
+
+# IDE ve Editor Ayarları
+.vscode/
+.idea/
+*.swp
+
+# OS dosyaları
+.DS_Store
+Thumbs.db

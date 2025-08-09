@@ -1,0 +1,617 @@
+/* Layout kısmı */
+
+:root{
+  --color-dark: rgb(12, 19, 79);
+  --color-mid: rgb(29, 38, 125);
+  --color-accent: rgb(92, 70, 156);
+  --color-light: rgb(212, 173, 252);
+  --font-family: "Google Sans Code", monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    background-color: var(--color-dark);
+    font-family: var(--font-family);
+}
+
+button {
+    border-radius: 15px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 1s ease;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    filter: brightness(150%);
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--color-mid);
+    background-image: linear-gradient(to right, var(--color-dark), var(--color-mid));
+    border: 1px solid var(--color-mid);
+    width: 100%;
+
+    .logo {
+      display: inline-block;
+      text-decoration: none;
+      font-size: 1.3rem;
+      transition: all 0.5s ease;
+
+      .logo_p1 {
+      font-family: "Google Sans Code", monospace;
+      color: var(--color-light);
+    }
+     .logo_p2 {
+      font-family: "Playwrite AU QLD", cursive;
+      color: var(--color-accent);
+    }
+     .logo_p3 {
+      font-family: "Playfair Display", serif;
+      color: var(--color-mid);
+    } 
+    }
+
+    .logo:hover {
+      filter: brightness(300%);
+    }
+
+    .nav-links {
+      display: flex;
+      column-gap: 60px;
+      align-items: center;
+
+      .nav-link {
+      text-decoration: none;
+      color: var(--color-light);
+      transition: all 0.5s ease;
+      }
+
+      .nav-link:hover {
+        color: var(--color-accent);
+      }
+    }
+
+    .col-wrapper {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      color: var(--color-light);
+      align-items: center;
+    }
+
+
+    .themes {
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+
+      .theme-button1 {
+        font-family: "Google Sans Code", monospace;
+        transition: all 1s ease;
+        color: rgb(212, 173, 252);
+        background-color: rgb(29, 38, 125);
+        background-image: linear-gradient(to right, rgb(12, 19, 79), rgb(29, 38, 125), rgb(92, 70, 156), rgb(212, 173, 252));  
+      }
+      
+      .theme-button2 {
+        font-family: "Playwrite AU QLD", cursive;
+        transition: all 1s ease;
+        background-color: rgb(249, 245, 235);
+        color: rgb(0, 43, 91);
+        background-image: linear-gradient(to right, rgb(249, 245, 235), rgb(228, 220, 207), rgb(234, 84, 85), rgb(0, 43, 91));
+      }
+
+      .theme-button3 {
+        font-family: "Playfair Display", serif;
+        transition: all 1s ease;
+        background-color: rgb(245, 243, 233);
+        color: rgb(60, 70, 50);
+        background-image: linear-gradient(to right, rgb(245, 243, 233), rgb(215, 225, 200), rgb(140, 160, 120), rgb(47, 58, 36));
+        
+      }
+
+    }
+    
+}
+
+.footer {
+  bottom: 0;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-size: 0.7rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* Layout kısmı */
+
+
+/* HomePage ve AboutMe kısmı */
+
+.hero {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-light);
+  font-size: 0.9rem;
+  padding: 30px 50px 30px 50px;
+  border: 1px solid var(--color-mid);
+  border-radius: 8px;
+  margin-top: 50px;
+  transition: all 0.5s ease;
+
+  .hero-text {
+    width: 50%;
+  }
+}
+
+.hero:hover {
+  filter: brightness(150%);
+}
+
+.moon {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  box-shadow: 0 0 10px 0 var(--color-mid);
+  transition: all 5s ease;
+  background-image: radial-gradient(circle at 30% 30%, var(--color-accent) 40%, var(--color-mid) 100%);
+  animation: rotation-360 5s ease forwards;
+}
+
+.moon:hover {
+  box-shadow:  0 0 30px 0 var(--color-mid);
+  filter: brightness(200%);
+}
+
+
+.blog-invite {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  width: 40%;
+  column-gap: 30px;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: var(--color-light);
+  border: 1px solid var(--color-mid);
+  border-radius: 8px;
+  transition: all 0.5s ease;
+
+  .blog-invite-link {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-light);
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+  }
+
+  .blog-invite-link:hover {
+    color: var(--color-accent);
+    background-color: var(--color-light);
+  }
+
+}
+
+.blog-invite:hover {
+  filter: brightness(150%);
+}
+
+
+.triangle {
+  width: 150px;
+  height: 150px;
+  background-color: var(--color-accent);
+  background-image: linear-gradient(to bottom right, var(--color-accent), var(--color-mid));
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+  transition: all 5s ease;
+  animation: rotation-90 4s forwards;
+  transform-origin: center;
+}
+
+.triangle:hover {
+  filter: brightness(200%);
+}
+
+@keyframes rotation-90 {
+   from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes rotation-360 {
+   from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* HomePage ve AboutMe kısmı */
+
+/* Blog kısmı */
+
+
+.flex-container {
+  margin-top: 20px;
+  display: flex;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  width: 350px;
+  height: 450px;
+  border: 1px solid var(--color-mid);
+  color: var(--color-light);
+  font-size: 1rem;
+  padding: 15px 10px 15px 10px;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+  align-items: center;
+}
+
+
+.card:hover {
+  filter: brightness(150%);
+}
+
+.card img {
+    border-radius: 8px;
+    border: 1px solid var(--color-mid);
+    opacity: 0.9;
+  }
+
+.card-title {
+  width: 70%;
+  text-align: center;
+}
+  
+.card-bottom {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+.card a {
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-light);
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+  }
+
+.card a:hover {
+    color: var(--color-accent);
+    background-color: var(--color-light);
+  }
+
+
+.pagination-wrapper {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  display: flex;
+  width: 40%;
+  height: 40px;
+  border: 1px solid var(--color-mid);
+  justify-content: center;
+  align-items: center;
+}  
+
+.pagination {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+}
+
+.pagination span {
+  color: var(--color-light);
+  padding: 0.5rem 1rem;
+  background-color: var(--color-dark);
+  border-radius: 4px;
+}
+
+.pagination a {
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-light);
+    background-color: var(--color-accent);
+    border: none;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.pagination a:hover {
+  color: var(--color-accent);
+  background-color: var(--color-light);
+}
+
+/* Blog kısmı */
+
+
+/* Post kısmı */
+
+.content-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-mid);
+  height: 70%;
+  width: 75%;
+  align-items: center;
+  color: var(--color-light);
+  font-size: 0.9rem;
+  padding: 10px 30px 10px 30px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.head img{
+  width: 60%;
+  height: 30%;
+  border: 1px solid var(--color-mid);
+}
+
+.text {
+  text-align: justify;
+}
+
+.text img {
+  width: 50%;
+  height: 25%;
+  border: 1px solid var(--color-mid);
+}
+
+/* Post kısmı */
+
+
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero .hero-text {
+    width: 100%;
+  }
+
+  .moon,
+  .triangle {
+    width: 150px;
+    height: 150px;
+    animation: rotation-360 4s forwards;
+  }
+
+  .blog-invite {
+    width: 70%;
+    flex-direction: column;
+    row-gap: 15px;
+    text-align: center;
+  }
+
+  .flex-container {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 48%;
+    height: auto;
+  }
+
+  .content-container {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .head img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border: 1px solid var(--color-mid);
+  }
+
+  .text {
+    width: 100%;
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  .text img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-top: 10px;
+    border: 1px solid var(--color-mid);
+  }
+
+
+  .pagination-wrapper {
+    width: 60%;
+  }
+}
+
+
+@media (max-width: 600px) {
+ 
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .col-wrapper span {
+    display: none;
+  }
+
+  .themes button {
+    width: 60px;
+    height: 30px;
+    font-size: 0.7rem;
+    border-radius: 8px;
+    padding: 4px;
+  }
+
+  .nav-links {
+    column-gap: 20px;
+  }
+
+  .navbar .logo {
+    font-size: 1.1rem;
+  }
+
+  .hero {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .moon,
+  .triangle {
+    width: 120px;
+    height: 120px;
+  }
+
+
+  .card {
+    width: 100%;
+  }
+
+  .blog-invite {
+    width: 90%;
+  }
+
+
+  .pagination-wrapper {
+    width: 90%;
+  }
+
+  .content-container {
+    width: 95%;
+    padding: 12px;
+    font-size: 0.85rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .head {
+    row-gap: 8px;
+    text-align: center;
+  }
+
+  .head img {
+    width: 80%;
+    height: 40%;
+  }
+
+  .text {
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  .text img {
+    width: 60%;
+    height: 30%;
+  }
+}
+
+@media (max-width: 420px) {
+  .themes button {
+    font-size: 0.9rem;
+  }
+
+  .moon,
+  .triangle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .navbar .logo {
+    font-size: 1rem;
+  }
+
+   .content-container {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .head img {
+    width: 60%;
+    height: 30%;
+  }
+
+  .text {
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  .text img {
+    width: 50%;
+    height: 25%;
+  }
+}
