@@ -20,6 +20,7 @@ Kişisel blog projesi — Django ile geliştirilmiş, modüler yapıya sahip, i�
 - HTML/CSS/JS  
 - Bootstrap  
 - PostgreSQL (opsiyonel)
+- CK Editor
 
 ## ⚙️ Kurulum
 
