@@ -10,8 +10,7 @@ Kişisel blog projesi — Django ile geliştirilmiş, modüler yapıya sahip, i�
 - Hakkımda ve ana sayfa bölümleri  
 - Admin panel üzerinden içerik yönetimi  
 - Statik dosya yönetimi (CSS, JS, görseller)  
-- Tema desteği: farklı sayfa düzenleri ve görsel stillerle özelleştirilebilir yapı  
-- Bootstrap ile temel stil desteği
+- Tema desteği: farklı sayfa düzenleri ve görsel stillerle özelleştirilebilir yapı
 
 ## 🧱 Teknolojiler
 
