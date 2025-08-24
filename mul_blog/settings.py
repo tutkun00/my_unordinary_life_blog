@@ -151,37 +151,21 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CKEDITOR_5_CONFIGS = {
-    'default': {
-        'toolbar': 'Custom',
-        'height': 400,
-        'width': '100%',
-        'toolbar_Custom': [
-            ['Undo', 'Redo'],
-            ['Bold', 'Italic', 'Underline', 'Strike'],
-            ['Subscript', 'Superscript'],
-            ['RemoveFormat', 'Source'],
-            ['NumberedList', 'BulletedList'],
-            ['Outdent', 'Indent', 'Blockquote'],
-            ['JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
-            ['Link', 'Unlink', 'Anchor'],
-            ['Image', 'Table', 'HorizontalRule', 'SpecialChar'],
-            ['Styles', 'Format', 'Font', 'FontSize'],
-            ['TextColor', 'BGColor'],
-            ['Maximize'],
+    "default": {
+        "toolbar": [
+            "heading", "|",
+            "bold", "italic", "underline", "strikethrough", "|",
+            "link", "blockQuote", "code", "codeBlock", "|",
+            "bulletedList", "numberedList", "todoList", "|",
+            "insertTable", "imageUpload", "mediaEmbed", "|",
+            "undo", "redo", "removeFormat", "htmlEmbed", "sourceEditing"
         ],
-        'extraPlugins': ','.join([
-            'uploadimage',     # Görsel yükleme
-            'font',            # Font ailesi ve boyutu
-            'colorbutton',     # Yazı rengi ve arka plan rengi
-            'justify',         # Hizalama
-            'autogrow',        # Otomatik yükseklik
-            'embed',           # Video embed
-            'codesnippet',     # Kod blokları
-        ]),
-        'removePlugins': 'stylesheetparser',
-        'allowedContent': True,  # Tüm HTML içeriğe izin ver
-        'autoGrow_minHeight': 200,
-        'autoGrow_maxHeight': 600,
-        'autoGrow_bottomSpace': 50,
+        "image": {
+            "toolbar": ["imageTextAlternative", "imageStyle:full", "imageStyle:side"]
+        },
+        "table": {
+            "contentToolbar": ["tableColumn", "tableRow", "mergeTableCells"]
+        },
+        "language": "tr"
     }
 }
