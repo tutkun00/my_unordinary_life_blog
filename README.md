@@ -4,6 +4,8 @@
 
 Kişisel blog projesi — Django ile geliştirilmiş, modüler yapıya sahip, içerik yönetimi ve admin paneli ile desteklenmiş bir web uygulaması.
 
+[Website-linki](https://my-unordinary-life-blog-1605b27877b5.herokuapp.com/)
+
 ## 🚀 Özellikler
 
 - Blog postları oluşturma ve listeleme  
