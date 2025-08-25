@@ -4,7 +4,7 @@
 
 Kişisel blog projesi — Django ile geliştirilmiş, modüler yapıya sahip, içerik yönetimi ve admin paneli ile desteklenmiş bir web uygulaması.
 
-[Website-linki](https://my-unordinary-life-blog-1605b27877b5.herokuapp.com/)
+[Website-linki](https://myunordinarylifeblog.pythonanywhere.com/)
 
 ## 🚀 Özellikler
 
@@ -12,16 +12,15 @@ Kişisel blog projesi — Django ile geliştirilmiş, modüler yapıya sahip, i�
 - Hakkımda ve ana sayfa bölümleri  
 - Admin panel üzerinden içerik yönetimi  
 - Statik dosya yönetimi (CSS, JS, görseller)  
-- Tema desteği: farklı sayfa düzenleri ve görsel stillerle özelleştirilebilir yapı
+- Tema desteği: farklı temalar ile özelleştirilebilir yapı
 
 ## 🧱 Teknolojiler
 
-- Python 3  
+- Python   
 - Django  
-- HTML/CSS/JS  
-- Bootstrap  
-- PostgreSQL (opsiyonel)
-- CK Editor
+- HTML/CSS/JS    
+- SQLite (opsiyonel)
+- Django CK Editor 5
 
 ## ⚙️ Kurulum
 
